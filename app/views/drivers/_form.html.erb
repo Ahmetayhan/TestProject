@@ -1,0 +1,41 @@
+<div class = "panel">
+  <div class = "panel-body">
+    <%= simple_form_for(driver) do |form| %>
+      <% if driver.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
+          <ul>
+            <% driver.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col-md-2">
+          <%= form.input :name %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :last_name  %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :tc_no %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <%= form.input :birth_date %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :tel %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :address %>
+        </div>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  <div>
+<div>

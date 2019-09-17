@@ -1,0 +1,39 @@
+en:
+  activemodel:
+    model:
+      vehicle:
+        one: Vehicle
+        other: Vehicles
+      driver:
+        one: Drivers
+        other: Drivers
+  attributes:
+    vehicle:
+      name: Name
+      code: Vehicle Code
+      vehicle_class: Vehicle Class
+      brand: Brand
+      model: Model
+      model_year: Model Year
+      fuel_capacity: Fuel Capacity
+      fuel_type: Fuel Type
+      status: Status
+      purchase_date: Purchase Date
+    driver:
+      name: Name
+      last_name: Last Name
+      birh_day: Birth Day
+      tc_no: TC Identification Number
+      tel: Telephone
+      address: Address
+      comments: Comment
+  simple_form:
+    labels:
+      defaults:
+        edit: Edit
+        Back: Back
+        Comment: Comment
+        show: Show
+        edit: Edit
+        destroy: Destroy
+      

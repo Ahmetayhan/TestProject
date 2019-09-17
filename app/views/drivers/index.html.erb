@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Driver.model_name.human(count: 2) %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class= "col-md-1"><%= t("simple_form.attributes.driver.name") %></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.last_name")%></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.birth_date")%></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.tc_no")%></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.tel")%></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.address")%></th>
+      <th class= "col-md-1"><%= t("simple_form.labels.driver.created_at")%></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <hr>
+  <tbody>
+    <% @drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.last_name %></td>
+        <td><%= driver.birth_date %></td>
+        <td><%= driver.tc_no %></td>
+        <td><%= driver.tel %></td>
+        <td><%= driver.address %></td>
+        <td><%= driver.created_at %></td>
+        <td><%= link_to t("simple_form.labels.defaults.show"), driver %></td>
+        <td><%= link_to t("simple_form.labels.defaults.edit"), edit_driver_path(driver) %></td>
+        <td><%= link_to t("simple_form.labels.defaults.destroy"), driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><hr>
+
+<%= link_to 'New Driver', new_driver_path %>

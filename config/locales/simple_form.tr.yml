@@ -1,0 +1,40 @@
+tr:
+  activemodel:
+    model:
+      vehicle:
+        one: Araç
+        other: Araçlar
+      driver:
+        one: Sürücü
+        other: Sürücüler
+  attributes:
+    vehicle:
+      name: Adı
+      code: Plaka
+      vehicle_class: Araç Tipi
+      brand: Marka
+      model: Modeli
+      model_year: Model Yılı
+      fuel_capacity: Yakıt Kapasitesi
+      fuel_type: Yakıt tipi
+      status: Durumu
+      purchase_date: Satın Alınma Tarihi
+    driver:
+      name: Adı
+      last_name: Soyadı
+      birh_day: Doğum Tarihi
+      tc_no: TC Kimlik Numarası
+      tel: Telefon
+      address: Adres
+      comments: Yorumlar
+  simple_form:
+    labels:
+      defaults:
+        edit: Düzenle
+        Back: Geri
+        Comment: Yorumlar
+        show: Görüntüle
+        edit: Düzenle
+        destroy: Sil
+      
+

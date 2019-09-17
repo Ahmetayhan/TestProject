@@ -1,0 +1,52 @@
+<div class = "panel">
+  <div class = "panel-body">
+    <%= simple_form_for(vehicle) do |form| %>
+      <% if vehicle.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+          <ul>
+            <% vehicle.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col-md-2">
+          <%= form.input :name %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :model_year, as: :date  %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :brand %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :model %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :fuel_type, as: :select, collection: [:diesel,:oil,:gasoline,:electricity] %>
+        </div>
+      <div class="row">
+        <div class="col-md-2" style= "margin-top: 8mm ">
+          <%= form.input :status, as: :select, collection: [:active, :passive, :broke, :bloked], include_blank: false %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :vehicle_class, as: :select, collection: [:sedan, :hatchback, :cabrio, :suv, :pick_up], include_blank: false %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :fuel_capacity %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :purchase_date, as: :date %>
+        </div>
+        <div class="col-md-2">
+          <%= form.input :code %>
+        </div>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  <div>
+<div>

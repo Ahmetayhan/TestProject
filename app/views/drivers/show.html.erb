@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h4><i class="fa fa-truck fa-3x"></i> <%= Driver.model_name.human(count: 2) %></h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class= "col-md-3"><%= t("simple_form.labels.driver.name")%></th>
+      <td><%= @driver.name %></td>
+      <th class= "col-md-3"><%= t("simple_form.labels.driver.last_name")%></th>
+      <td class= "col-md-3"><%= @driver.last_name %></td>
+      <th><%= t("simple_form.labels.driver.birth_date")%></th>
+      <td class= "col-md-3"><%= @driver.birth_date %></td>
+    </tr>
+    <tr>
+      <th class= "col-md-2"><%= t("simple_form.labels.driver.tc_no")%></th>
+      <td><%= @driver.tc_no %></td>
+      <th class= "col-md-2"><%= t("simple_form.labels.driver.tel")%></th>
+      <td class= "col-md-2"><%= @driver.tel %></td>
+      <th><%= t("simple_form.labels.driver.address")%></th>
+      <td class= "col-md-2"><%= @driver.address %></td>
+    </tr>
+  </thead>
+</table>
+<p>
+  <%= link_to 'Edit', edit_driver_path(@driver) %> |
+  <%= link_to 'Back', drivers_path %>
+</p>
+<h5><%= t("simple_form.labels.driver.comment")%></h5>
